@@ -1,0 +1,118 @@
+:root {
+    --primary-color: hsl(318, 66%, 22%);
+    --darken-primary-color: hsl(258, 86%, 29%);
+    --lighten-primary-color: hsl(318, 68%, 76%);
+    --secondary-color: hsl(327, 87%, 49%);
+    --darken-secondary-color: hsl(197, 87%, 29%);
+    --lighten-secondary-color: hsl(327, 87%, 49%);
+  }
+  
+  body {
+    margin: 0;
+    background: #000;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: auto;
+    min-width: 500px;
+  }
+  
+  /* HEADER */
+  header {
+    height: 80px;
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    box-shadow: 0 3px 2px var(--darken-secondary-color);
+  }
+
+  main {
+    display: grid;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    gap: 8px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 320px ;
+    grid-template-areas: "sac sac sac ";
+  }
+
+.slider{
+    grid-area:sac;
+    background: black;
+    overflow: hidden;
+}
+
+.slides{
+    height: 100%;
+    width: calc(100% * 3);
+}
+
+.slide{
+    width: calc (100% / 3);
+    float: left ;
+    display: flex;
+
+}
+
+.services{
+    display: grid;
+    margin-top: 40px;
+    background :var(--bg);
+    padding: 30px;
+    font-size: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.team{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.place{
+    display: inline;;
+    text-align: left;
+}
+
+.contact{
+    float: left;
+}
+
+
+.slide .controls .prev,
+.slide .controls .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    cursor: pointer;
+}
+
+.slide .controls .prev{
+    left : 20px;
+    border-right: 30 px solid var(--secondary-color);
+    box-shadow: 4px 0 0 var(--primary-color);
+}
+
+.slide .controls .next{
+    right: 20px;
+    border-left: 30 px solid var(--secondary-color);
+    box-shadow: 4px 0 0 var(--primary-color);
+}
+
+footer{
+
+    display: grid;
+    margin-top: 600px;
+    background :var(--bg);
+    padding: 30px;
+    font-size: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+      
+}
